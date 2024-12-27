@@ -235,6 +235,12 @@ h2 {
     text-align: center; /* Centrar los títulos */
 }
 
+.counter-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .counter-box {
     position: relative;
     display: inline-block;
@@ -248,9 +254,6 @@ h2 {
     text-align: center; /* Centrar el contenido del contador */
     width: 100%; /* Ajustar ancho para que el contador ocupe todo el ancho */
     max-width: 400px; /* Limitar el ancho máximo */
-    margin-left: auto; /* Centrar horizontalmente */
-    margin-right: auto; /* Centrar horizontalmente */
-    transform: translateX(0); /* Eliminar el movimiento hacia la derecha */
 }
 
 .time-unit {
@@ -356,11 +359,7 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .counter-box {
-        transform: translateX(0); /* Centrar el contador en dispositivos móviles */
+    .counter-box-container {
+        align-items: center;
     }
-}
-
-.sidebar.active {
-    width: 250px;
 }
