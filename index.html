@@ -11,10 +11,11 @@
     <!-- Prepage Section -->
     <div id="prepage" class="prepage">
         <div class="preloader">
-            <video class="infinity-video" autoplay loop muted playsinline>
-                <source src="infinity-loop.webm" type="video/webm">
-                Tu navegador no soporta el video.
-            </video>
+            <svg class="infinity-svg" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10,25 Q25,0 50,25 T90,25" fill="none" stroke="black" stroke-width="2">
+                    <animate attributeName="stroke-dasharray" values="0,100; 100,0" dur="5s" repeatCount="indefinite"/>
+                </path>
+            </svg>
         </div>
         <div class="intro-content">
             <h1>Bienvenid@ a nuestra historia</h1>
