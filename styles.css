@@ -44,6 +44,7 @@ body.dark-theme {
 .infinity-svg {
     width: 80%; /* Ajustar el tamaño del SVG */
     height: auto;
+    max-width: 600px; /* Tamaño máximo para pantallas grandes */
 }
 
 .intro-content {
@@ -177,10 +178,6 @@ footer {
     text-align: center;
 }
 
-footer p {
-    margin: 0;
-    font-size: 1em;
-}
 footer p {
     margin: 0;
     font-size: 1em;
