@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Página</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,12 +14,12 @@
     <main>
         <section class="contador">
             <h2>Tiempo Juntos</h2>
-            <div id="counter">
-                <span id="years"></span> años, 
-                <span id="days"></span> días, 
-                <span id="hours"></span> horas, 
-                <span id="minutes"></span> minutos, 
-                <span id="seconds"></span> segundos
+            <div id="counter" class="counter-box">
+                <span id="years" class="time-unit"></span> años, 
+                <span id="days" class="time-unit"></span> días, 
+                <span id="hours" class="time-unit"></span> horas, 
+                <span id="minutes" class="time-unit"></span> minutos, 
+                <span id="seconds" class="time-unit"></span> segundos
             </div>
         </section>
         <section class="fotos">
@@ -36,6 +37,9 @@
             </div>
         </section>
     </main>
+    <footer>
+        <p>Con amor, <b>Ruceo</b></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
