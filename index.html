@@ -6,7 +6,6 @@
     <title>M&R</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="light-theme">
     <!-- Prepage Section -->
@@ -32,58 +31,62 @@
         <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <div id="sidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+            <a href="javascript:void(0)" class="menu-button" onclick="loadPage('main')">Página Principal</a>
             <a href="javascript:void(0)" class="menu-button" onclick="loadPage('tesoros')">Tesoros</a>
             <button id="theme-toggle" class="menu-button" onclick="toggleTheme()">Cambiar Tema</button>
         </div>
     </header>
     <main>
-        <section class="left-section">
-            <div class="counter-box-container">
-                <h2>Tiempo Juntos</h2>
-                <div id="counter" class="counter-box">
-                    <span id="years" class="time-unit"></span> años, 
-                    <span id="days" class="time-unit"></span> días, 
-                    <span id="hours" class="time-unit"></span> horas, 
-                    <span id="minutes" class="time-unit"></span> minutos, 
-                    <span id="seconds" class="time-unit"></span> segundos
+        <section id="main" class="main-section">
+            <section class="left-section">
+                <div class="counter-box-container">
+                    <h2>Tiempo Juntos</h2>
+                    <div id="counter" class="counter-box">
+                        <span id="years" class="time-unit"></span> años, 
+                        <span id="days" class="time-unit"></span> días, 
+                        <span id="hours" class="time-unit"></span> horas, 
+                        <span id="minutes" class="time-unit"></span> minutos, 
+                        <span id="seconds" class="time-unit"></span> segundos
+                    </div>
                 </div>
-            </div>
-            <h2>Nuestra Playlist</h2>
-            <div class="spotify-playlist">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EDlYgffvbkrmrN0WGQ6pf?si=bQol6ycDTS25mwVgj2HZdA" width="300" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-            </div>
+                <h2>Nuestra Playlist</h2>
+                <div class="spotify-playlist">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EDlYgffvbkrmrN0WGQ6pf?si=bQol6ycDTS25mwVgj2HZdA" width="300" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+            </section>
+            <section class="right-section">
+                <h2>Nuestros Momentos</h2>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="1000001634.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="1000001256.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="1000001728_1_.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="1000000363.jpeg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="1000000449.jpeg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="1000001886 (1).jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="IMG_0164.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="IMG_4411.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </section>
         </section>
-        <section class="right-section">
-            <h2>Nuestros Momentos</h2>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="1000001634.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="1000001256.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="1000001728_1_.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="1000000363.jpeg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="1000000449.jpeg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="1000001886 (1).jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="IMG_0164.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="IMG_4411.jpg" style="width:100%">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-        </section>
+        
         <section id="tesoros" class="tesoros-section" style="display: none;">
             <h2>Introduce la contraseña:</h2>
             <div class="password-input">
