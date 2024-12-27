@@ -138,34 +138,6 @@ body.dark-theme .prepage {
     animation: starTwinkle 3s infinite;
 }
 
-/* Header */
-header {
-    background-image: url('20211010_193858.jpg'); /* Fondo del encabezado */
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-
-#theme-toggle {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#theme-toggle:hover {
-    background-color: #555;
-}
-
 /* Sidebar Menu */
 .sidebar {
     height: 100%;
@@ -206,13 +178,41 @@ header {
     cursor: pointer;
     color: yellow;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     z-index: 1002;
 }
 
 .sidebar.active {
     width: 250px;
+}
+
+/* Header */
+header {
+    background-image: url('20211010_193858.jpg'); /* Fondo del encabezado */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+#theme-toggle {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #555;
 }
 
 main {
@@ -250,7 +250,7 @@ h2 {
     max-width: 400px; /* Limitar el ancho máximo */
     margin-left: auto; /* Centrar horizontalmente */
     margin-right: auto; /* Centrar horizontalmente */
-    transform: translateX(17%); /* Mover un poco más a la derecha */
+    transform: translateX(0); /* Eliminar el movimiento hacia la derecha */
 }
 
 .time-unit {
@@ -351,6 +351,13 @@ footer p {
     100% {
         transform: scale(0);
         opacity: 0;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .counter-box {
+        transform: translateX(0); /* Centrar el contador en dispositivos móviles */
     }
 }
 
