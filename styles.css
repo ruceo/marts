@@ -36,6 +36,9 @@ body.dark-theme {
 
 .preloader {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .loader {
@@ -47,19 +50,33 @@ body.dark-theme {
     animation: spin 2s linear infinite;
 }
 
+.infinity-logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    animation: infinityAnimation 2s linear infinite;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
+@keyframes infinityAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
 .intro-content {
     text-align: center;
     color: #fff;
-}
-
-.intro-content .logo {
-    max-width: 150px;
-    margin-bottom: 20px;
 }
 
 .intro-content h1 {
