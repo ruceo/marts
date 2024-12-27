@@ -363,3 +363,45 @@ footer p {
         align-items: center;
     }
 }
+
+/* Estilos para la sección de tesoros */
+.tesoros-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.password-input {
+    margin-bottom: 20px;
+}
+
+#password {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.keypad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.keypad button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.keypad button:hover {
+    background-color: #f0f0f0;
+}
