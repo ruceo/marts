@@ -114,3 +114,32 @@ for (let i = 0; i < 100; i++) {
 
 // Continuously create stars
 setInterval(createStar, 100);
+
+// Function to load different sections
+function loadPage(page) {
+    document.querySelectorAll('main > section').forEach(section => {
+        section.style.display = 'none';
+    });
+    document.getElementById(page).style.display = 'block';
+}
+
+// Password Logic
+const correctPassword = "1234"; // Set your desired password here
+
+function enterDigit(digit) {
+    const passwordInput = document.getElementById("password");
+    passwordInput.value += digit;
+}
+
+function clearPassword() {
+    document.getElementById("password").value = "";
+}
+
+function checkPassword() {
+    const passwordInput = document.getElementById("password").value;
+    if (passwordInput === correctPassword) {
+        alert("Contraseña correcta. Acceso concedido.");
+    } else {
+        alert("Contraseña incorrecta. Inténtalo de nuevo.");
+    }
+}
