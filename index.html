@@ -28,10 +28,14 @@
     <!-- Main Content -->
     <header>
         <h1>Nuestra Historia</h1>
-        <div class="hamburger-menu" onclick="toggleMenu()">
-            &#9776;
-        </div>
+        <div id="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Icono del menú -->
     </header>
+
+    <nav id="sidebar" class="sidebar">
+        <button id="close-menu" onclick="toggleMenu()">×</button>
+        <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+    </nav>
+
     <main>
         <section class="left-section">
             <h2>Tiempo Juntos</h2>
@@ -82,12 +86,6 @@
     <footer>
         <p>Te amo infinito, <b>Marta&Rubén</b></p>
     </footer>
-
-    <!-- Sidebar Menu -->
-    <div id="sidebar" class="sidebar">
-        <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
