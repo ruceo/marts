@@ -18,6 +18,81 @@ body.dark-theme {
     color: #fff8e1;
 }
 
+/* Prepage Styles */
+.prepage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffeb3b, #ff8c00);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.preloader {
+    margin-bottom: 20px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #333;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.intro-content {
+    text-align: center;
+    color: #fff;
+}
+
+.intro-content .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.intro-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.intro-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#enter-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#enter-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Hide prepage */
+.prepage.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 header {
     background-color: #ffeb3b;
     padding: 20px;
