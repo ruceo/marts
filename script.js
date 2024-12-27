@@ -71,6 +71,16 @@ function enterSite() {
     setTimeout(() => { prepage.style.display = "none"; }, 1000); // Hide after transition
 }
 
+// Toggle Sidebar Menu
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+    } else {
+        sidebar.style.width = "250px";
+    }
+}
+
 // Cursor Trail Effect
 document.getElementById('prepage').addEventListener('mousemove', function(e) {
     const spark = document.createElement('div');
