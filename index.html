@@ -12,8 +12,13 @@
     <div id="prepage" class="prepage">
         <div class="preloader">
             <svg class="infinity-svg" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20,25 C20,10 50,10 50,25 C50,40 80,40 80,25" fill="none" stroke="black" stroke-width="2">
-                    <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="2s" repeatCount="indefinite" />
+                <!-- Primera mitad del logo del infinito -->
+                <path d="M20,25 C20,10 50,10 50,25" fill="none" stroke="black" stroke-width="2">
+                    <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="1s" repeatCount="indefinite" />
+                </path>
+                <!-- Segunda mitad del logo del infinito -->
+                <path d="M50,25 C50,40 80,40 80,25" fill="none" stroke="black" stroke-width="2">
+                    <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="1s" begin="1s" repeatCount="indefinite" />
                 </path>
             </svg>
         </div>
