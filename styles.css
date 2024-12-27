@@ -16,7 +16,7 @@ html, body {
 }
 
 body.light-theme {
-    background-color: #fff8e1;
+    background-color: #8ab6d6; /* Fondo azul no muy oscuro */
     color: #333;
 }
 
@@ -184,6 +184,9 @@ h2 {
     border: 2px solid #fff; /* Borde del contador */
     color: white;
     margin-bottom: 20px;
+    text-align: center; /* Centrar el contenido del contador */
+    margin-left: auto; /* Permite centrado horizontal */
+    margin-right: auto; /* Permite centrado horizontal */
 }
 
 .time-unit {
