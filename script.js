@@ -104,3 +104,13 @@ for (let i = 0; i < 100; i++) {
 
 // Continuously create stars
 setInterval(createStar, 100);
+
+// Sidebar Menu
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+    } else {
+        sidebar.style.width = "250px";
+    }
+}
