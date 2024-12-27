@@ -209,16 +209,16 @@ header {
 
 main {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
     padding: 120px 20px 20px; /* Ajustar padding para evitar que el contenido se superponga con el header */
 }
 
 .left-section, .right-section {
-    width: 100%; /* Ajustar ancho para que las secciones ocupen todo el ancho */
+    width: 50%; /* Ajustar ancho para que las secciones ocupen la mitad del ancho cada una */
     max-width: 600px; /* Limitar el ancho máximo */
-    margin: 20px auto; /* Centrar horizontalmente */
+    margin: 20px; /* Espacio alrededor */
 }
 
 h2 {
@@ -351,6 +351,14 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    main {
+        flex-wrap: wrap;
+    }
+    
+    .left-section, .right-section {
+        width: 100%;
+    }
+    
     .counter-box-container {
         align-items: center;
     }
