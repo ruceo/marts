@@ -2,11 +2,11 @@
 const startDate = new Date("2022-08-29T00:00:00");
 
 // Update the count down every 1 second
-setInterval(function() {
+setInterval(function () {
     const now = new Date().getTime();
     const distance = now - startDate.getTime();
 
-    // Time calculations for years, days, hours, minutes and seconds
+    // Time calculations for years, days, hours, minutes, and seconds
     const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
     const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -23,18 +23,34 @@ setInterval(function() {
 
 // Slideshow
 let slideIndex = 0;
-showSlides();
+showSlides(slideIndex);
 
-function showSlides() {
-    const slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }    
-    slides[slideIndex - 1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
+
+// Show the current slide
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("mySlides");
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex].style.display = "block";
+}
+
+// Automatic slideshow
+setInterval(() => {
+    plusSlides(1); // Automatically move to the next slide every 3 seconds
+}, 3000);
 
 // Theme Toggle
 function toggleTheme() {
