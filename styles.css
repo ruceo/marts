@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0e68c;
+    font-family: 'Raleway', sans-serif;
+    background-color: #fff8e1;
     color: #333;
     text-align: center;
     margin: 0;
@@ -10,10 +10,13 @@ body {
 header {
     background-color: #ffeb3b;
     padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 h1 {
     margin: 0;
+    font-size: 2.5em;
+    color: #333;
 }
 
 main {
@@ -24,11 +27,34 @@ main {
     margin-bottom: 40px;
 }
 
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.counter-box {
+    display: inline-block;
+    background-color: #ffeb3b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.time-unit {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+}
+
 .slideshow-container {
     position: relative;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
 .mySlides {
@@ -37,6 +63,7 @@ main {
 
 img {
     vertical-align: middle;
+    border-radius: 10px;
 }
 
 .fade {
@@ -47,4 +74,19 @@ img {
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+}
+
+footer {
+    background-color: #ffeb3b;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
 }
