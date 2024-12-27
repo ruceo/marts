@@ -178,7 +178,7 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Fondo difuminado */
+    background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
     border: 2px solid #fff; /* Borde del contador */
     color: white;
     margin-bottom: 20px;
@@ -223,7 +223,7 @@ img {
 /* Ajuste específico para pantallas grandes */
 @media screen and (min-width: 1024px) {
     .mySlides img {
-        max-height: 500px; /* Ajustar la altura máxima */
+        max-height: 400px; /* Ajustar la altura máxima */
         object-fit: cover; /* Asegura que la imagen mantenga su proporción */
     }
 }
