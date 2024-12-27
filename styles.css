@@ -7,6 +7,10 @@ body {
     flex-direction: column;
     align-items: center;
     transition: background-color 0.3s, color 0.3s;
+    background-image: url('path-to-your-wave-image.jpg'); /* Ruta a la imagen de fondo con olas */
+    background-size: cover; /* Asegura que la imagen cubra toda la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen de fondo */
 }
 
 /* Make body scrollable */
@@ -16,7 +20,6 @@ html, body {
 }
 
 body.light-theme {
-    background-color: #6a8caf;  /* Fondo azul no muy oscuro */
     color: #333;
 }
 
@@ -190,6 +193,7 @@ h2 {
     max-width: 400px; /* Limitar el ancho máximo */
     margin-left: auto; /* Centrar horizontalmente */
     margin-right: auto; /* Centrar horizontalmente */
+    transform: translateX(10%); /* Mover un poco a la derecha */
 }
 
 .time-unit {
