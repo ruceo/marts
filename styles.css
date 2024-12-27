@@ -7,7 +7,12 @@ body {
     flex-direction: column;
     align-items: center;
     transition: background-color 0.3s, color 0.3s;
-    overflow: hidden;
+}
+
+/* Make body scrollable */
+html, body {
+    height: 100%;
+    overflow: auto;
 }
 
 body.light-theme {
