@@ -124,7 +124,7 @@ function loadPage(page) {
 }
 
 // Password Logic
-const correctPassword = "1234"; // Set your desired password here
+const correctPassword = "2229"; // Set your desired password here
 
 function enterDigit(digit) {
     const passwordInput = document.getElementById("password");
@@ -138,7 +138,7 @@ function clearPassword() {
 function checkPassword() {
     const passwordInput = document.getElementById("password").value;
     if (passwordInput === correctPassword) {
-        alert("Contraseña correcta. Acceso concedido.");
+        alert("Contraseña correcta. Ganaste. Pero no te emociones… estaba planeado para que la adivinaras.");
     } else {
         alert("Contraseña incorrecta. Inténtalo de nuevo.");
     }
