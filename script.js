@@ -77,7 +77,7 @@ document.getElementById('prepage').addEventListener('mousemove', function(e) {
     spark.className = 'cursor-trail';
     spark.style.left = `${e.pageX}px`;
     spark.style.top = `${e.pageY}px`;
-    document.body.appendChild(spark);
+    document.getElementById('prepage').appendChild(spark);
     setTimeout(() => {
         spark.remove();
     }, 1000); // Remove spark after 1 second
