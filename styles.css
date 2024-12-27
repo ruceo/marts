@@ -37,6 +37,79 @@ body.dark-theme .counter-box {
     color: #fff8e1; /* Color claro para el tema oscuro */
 }
 
+/* Hide the main content initially */
+.hidden {
+    display: none;
+}
+
+/* Prepage Styles */
+.prepage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1e3b70, #151a3c);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 1s ease, visibility 1s ease;
+    cursor: none;
+    overflow: hidden;
+}
+
+.preloader {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infinity-svg {
+    width: 80%;
+    height: auto;
+    max-width: 600px;
+}
+
+.intro-content {
+    text-align: center;
+    color: #fff;
+}
+
+.intro-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.intro-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#enter-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50px; /* Borde circular */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#enter-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Hide prepage */
+.prepage.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* Sidebar Menu */
 .sidebar {
     height: 100%;
