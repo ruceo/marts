@@ -28,24 +28,23 @@
     <!-- Main Content -->
     <header>
         <h1>Nuestra Historia</h1>
-        <div id="menu-icon" class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+            <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+        </div>
     </header>
-    
-    <!-- Sidebar Menu -->
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-        <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
-    </div>
-
     <main>
         <section class="left-section">
-            <h2>Tiempo Juntos</h2>
-            <div id="counter" class="counter-box">
-                <span id="years" class="time-unit"></span> años, 
-                <span id="days" class="time-unit"></span> días, 
-                <span id="hours" class="time-unit"></span> horas, 
-                <span id="minutes" class="time-unit"></span> minutos, 
-                <span id="seconds" class="time-unit"></span> segundos
+            <div class="counter-box-container">
+                <h2>Tiempo Juntos</h2>
+                <div id="counter" class="counter-box">
+                    <span id="years" class="time-unit"></span> años, 
+                    <span id="days" class="time-unit"></span> días, 
+                    <span id="hours" class="time-unit"></span> horas, 
+                    <span id="minutes" class="time-unit"></span> minutos, 
+                    <span id="seconds" class="time-unit"></span> segundos
+                </div>
             </div>
             <h2>Nuestra Playlist</h2>
             <div class="spotify-playlist">
