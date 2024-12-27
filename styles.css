@@ -235,8 +235,7 @@ h2 {
 }
 
 .counter-box {
-    display: flex;
-    justify-content: center;
+    position: relative;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -245,6 +244,7 @@ h2 {
     color: white;
     margin-bottom: 20px;
     text-align: center; /* Centrar el contenido del contador */
+    width: 100%; /* Ajustar ancho para que el contador ocupe todo el ancho */
     max-width: 400px; /* Limitar el ancho máximo */
 }
 
