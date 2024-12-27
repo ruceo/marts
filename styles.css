@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -42,9 +43,9 @@ body.dark-theme {
 }
 
 .infinity-svg {
-    width: 80%; /* Ajustar el tamaño del SVG */
+    width: 80%;
     height: auto;
-    max-width: 600px; /* Tamaño máximo para pantallas grandes */
+    max-width: 600px;
 }
 
 .intro-content {
@@ -86,7 +87,7 @@ body.dark-theme {
 header {
     background-color: #ffeb3b;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     text-align: center;
     position: fixed;
@@ -113,7 +114,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding: 80px 20px 20px; /* Ajustar para el encabezado fijo */
+    padding: 80px 20px 20px;
 }
 
 .left-section, .right-section {
@@ -131,12 +132,12 @@ h2 {
     display: inline-block;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background-image: url('20211010_193858.jpg'); /* Añade tu imagen de fondo aquí */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('20211010_193858.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    margin-bottom: 20px; /* Añade separación debajo del contador */
+    margin-bottom: 20px;
 }
 
 .time-unit {
@@ -155,23 +156,50 @@ h2 {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
 .mySlides {
     display: none;
+    animation: fadeEffect 1.5s;
 }
 
-img {
-    vertical-align: middle;
-    border-radius: 10px;
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 footer {
     background-color: #ffeb3b;
     padding: 10px;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0;
     width: 100%;
