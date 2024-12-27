@@ -27,7 +27,6 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s;
 }
 
 #theme-toggle {
@@ -37,12 +36,11 @@ header {
     color: #fff;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #theme-toggle:hover {
     background-color: #555;
-    transform: scale(1.05);
 }
 
 main {
@@ -74,12 +72,6 @@ h2 {
     background-position: center;
     color: white;
     margin-bottom: 20px; /* Añade separación debajo del contador */
-    transition: transform 0.2s, box-shadow 0.3s;
-}
-
-.counter-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .time-unit {
@@ -100,12 +92,6 @@ h2 {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 10px;
-    transition: transform 0.2s, box-shadow 0.3s;
-}
-
-.slideshow-container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .mySlides {
@@ -115,12 +101,6 @@ h2 {
 img {
     vertical-align: middle;
     border-radius: 10px;
-    transition: transform 0.2s, box-shadow 0.3s;
-}
-
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .fade {
