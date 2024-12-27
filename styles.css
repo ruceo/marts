@@ -1,3 +1,4 @@
+/* Estilo para el cuerpo */
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -8,16 +9,19 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Tema claro */
 body.light-theme {
     background-color: #fff8e1;
     color: #333;
 }
 
+/* Tema oscuro */
 body.dark-theme {
     background-color: #333;
     color: #fff8e1;
 }
 
+/* Estilo para el encabezado */
 header {
     background-color: #ffeb3b;
     padding: 20px;
@@ -29,6 +33,7 @@ header {
     z-index: 1000;
 }
 
+/* Estilo para el botón de cambio de tema */
 #theme-toggle {
     margin-top: 10px;
     padding: 10px 20px;
@@ -43,6 +48,7 @@ header {
     background-color: #555;
 }
 
+/* Estilo para el contenido principal */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -56,11 +62,13 @@ main {
     margin: 10px;
 }
 
+/* Estilo para los encabezados */
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
+/* Estilo para el contador */
 .counter-box {
     position: relative;
     display: inline-block;
@@ -80,11 +88,13 @@ h2 {
     font-weight: 700;
 }
 
+/* Estilo para la playlist de Spotify */
 .spotify-playlist {
     margin-top: 20px;
     text-align: center;
 }
 
+/* Estilo para el contenedor de la presentación de diapositivas */
 .slideshow-container {
     position: relative;
     max-width: 100%;
@@ -94,6 +104,7 @@ h2 {
     border-radius: 10px;
 }
 
+/* Estilo para las diapositivas */
 .mySlides {
     display: none;
 }
@@ -103,16 +114,19 @@ img {
     border-radius: 10px;
 }
 
+/* Animación de desvanecimiento */
 .fade {
     animation-name: fade;
     animation-duration: 3s;
 }
 
+/* Definición de la animación @keyframes */
 @keyframes fade {
     from { opacity: .4; }
     to { opacity: 1; }
 }
 
+/* Estilo para el pie de página */
 footer {
     background-color: #ffeb3b;
     padding: 10px;
