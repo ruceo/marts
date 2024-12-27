@@ -70,3 +70,37 @@ function enterSite() {
     prepage.classList.add("hidden");
     setTimeout(() => { prepage.style.display = "none"; }, 1000); // Hide after transition
 }
+
+// Cursor Trail Effect
+document.addEventListener('mousemove', function(e) {
+    const spark = document.createElement('div');
+    spark.className = 'cursor-trail';
+    spark.style.left = `${e.pageX}px`;
+    spark.style.top = `${e.pageY}px`;
+    document.body.appendChild(spark);
+    setTimeout(() => {
+        spark.remove();
+    }, 1000); // Remove spark after 1 second
+});
+
+// Add Stars to the Background
+function createStar() {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.left = `${Math.random() * 100}vw`;
+    document.querySelector('.starry-bg').appendChild(star);
+
+    // Remove star after a random time to create a twinkling effect
+    setTimeout(() => {
+        star.remove();
+    }, Math.random() * 3000 + 3000); // Between 3 and 6 seconds
+}
+
+// Create multiple stars
+for (let i = 0; i < 100; i++) {
+    createStar();
+}
+
+// Continuously create stars
+setInterval(createStar, 100);
