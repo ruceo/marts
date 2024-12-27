@@ -48,7 +48,7 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background-image: url('fotos/20211010_193858.jpg'); /* Añade tu imagen de fondo aquí */
+    background-image: url('20211010_193858.jpg'); /* Añade tu imagen de fondo aquí */
     background-size: cover;
     background-position: center;
     color: white;
