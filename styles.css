@@ -159,11 +159,12 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding: 80px 20px 20px;
+    padding: 100px 20px 20px; /* Ajuste de padding para evitar que el contenido se superponga con el header */
 }
 
 .left-section, .right-section {
-    width: 45%;
+    width: 100%; /* Ajustar el ancho para que las secciones ocupen todo el ancho en dispositivos grandes */
+    max-width: 1200px; /* Limitar el ancho máximo */
     margin: 10px;
 }
 
@@ -171,6 +172,7 @@ h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #fff; /* Asegurar que los títulos sean visibles */
+    text-align: center; /* Centrar los títulos */
 }
 
 .counter-box {
@@ -219,14 +221,8 @@ img {
     vertical-align: middle;
     width: 100%; /* Ajuste para que las imágenes se vean bien en el ordenador */
     height: auto;
-}
-
-/* Ajuste específico para pantallas grandes */
-@media screen and (min-width: 1024px) {
-    .mySlides img {
-        max-height: 500px; /* Ajustar la altura máxima */
-        object-fit: contain; /* Asegura que la imagen mantenga su proporción */
-    }
+    max-height: 500px; /* Ajustar la altura máxima */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
 }
 
 .prev, .next {
