@@ -47,3 +47,10 @@ function toggleTheme() {
         body.classList.add("light-theme");
     }
 }
+
+// Enter Site
+function enterSite() {
+    const prepage = document.getElementById("prepage");
+    prepage.classList.add("hidden");
+    setTimeout(() => { prepage.style.display = "none"; }, 1000); // Hide after transition
+}
