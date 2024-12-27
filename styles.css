@@ -89,7 +89,7 @@ body.dark-theme {
 
 /* Starry Background */
 body.light-theme .prepage {
-    background: radial-gradient(circle, #ffeb3b, #ff8c00);
+    background: radial-gradient(circle, #1e3b70, #151a3c); /* Degradado azul */
 }
 
 body.dark-theme .prepage {
@@ -252,7 +252,7 @@ footer p {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: yellow;
+    background: rgba(255, 255, 0, 0.5); /* Amarillo difuminado */
     border-radius: 50%;
     pointer-events: none;
     animation: sparkFade 1s ease-out forwards;
