@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     transition: background-color 0.3s, color 0.3s;
+    overflow: hidden;
 }
 
 body.light-theme {
@@ -26,13 +27,15 @@ body.dark-theme {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #ffeb3b, #ff8c00);
+    background: radial-gradient(circle, #1e3b70, #151a3c);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 10000;
     transition: opacity 1s ease, visibility 1s ease;
+    cursor: none;
+    overflow: hidden;
 }
 
 .preloader {
@@ -82,6 +85,39 @@ body.dark-theme {
 .prepage.hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+/* Starry Background */
+body.light-theme .prepage {
+    background: radial-gradient(circle, #ffeb3b, #ff8c00);
+}
+
+body.dark-theme .prepage {
+    background: radial-gradient(circle, #1e3b70, #151a3c);
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.starry-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: yellow;
+    border-radius: 50%;
+    animation: starTwinkle 3s infinite;
 }
 
 header {
@@ -209,4 +245,26 @@ footer {
 footer p {
     margin: 0;
     font-size: 1em;
+}
+
+/* Cursor Trail */
+.cursor-trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkFade 1s ease-out forwards;
+}
+
+@keyframes sparkFade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
