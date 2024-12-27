@@ -1,5 +1,5 @@
 // Set the date we started dating
-const startDate = new Date("2022-29-08T00:00:00");
+const startDate = new Date("2022-08-29T00:00:00");
 
 // Update the count down every 1 second
 setInterval(function() {
