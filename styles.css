@@ -16,7 +16,7 @@ html, body {
 }
 
 body.light-theme {
-    background-color: #8ab6d6; /* Fondo azul no muy oscuro */
+    background-color: #6a8caf;  /* Fondo azul no muy oscuro */
     color: #333;
 }
 
@@ -163,8 +163,9 @@ main {
 }
 
 .left-section, .right-section {
-    width: 45%;
-    margin: 20px; /* Añadir margen para separar las secciones */
+    width: 100%; /* Ajustar ancho para que las secciones ocupen todo el ancho */
+    max-width: 600px; /* Limitar el ancho máximo */
+    margin: 20px auto; /* Centrar horizontalmente */
 }
 
 h2 {
@@ -185,8 +186,10 @@ h2 {
     color: white;
     margin-bottom: 20px;
     text-align: center; /* Centrar el contenido del contador */
-    margin-left: auto; /* Permite centrado horizontal */
-    margin-right: auto; /* Permite centrado horizontal */
+    width: 100%; /* Ajustar ancho para que el contador ocupe todo el ancho */
+    max-width: 400px; /* Limitar el ancho máximo */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
 }
 
 .time-unit {
