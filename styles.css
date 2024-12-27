@@ -193,7 +193,7 @@ h2 {
     max-width: 400px; /* Limitar el ancho máximo */
     margin-left: auto; /* Centrar horizontalmente */
     margin-right: auto; /* Centrar horizontalmente */
-    transform: translateX(10%); /* Mover un poco a la derecha */
+    transform: translateX(15%); /* Mover un poco a la derecha */
 }
 
 .time-unit {
