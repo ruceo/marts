@@ -26,69 +26,60 @@
     </div>
 
     <!-- Main Content -->
-    <div id="main-content" class="hidden">
-        <header>
-            <h1>Nuestra Historia</h1>
-            <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
-            <!-- Sidebar Menu -->
-            <div id="sidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-                <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+    <header>
+        <h1>Nuestra Historia</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+    </header>
+    <main>
+        <section class="left-section">
+            <h2>Tiempo Juntos</h2>
+            <div id="counter" class="counter-box">
+                <span id="years" class="time-unit"></span> años, 
+                <span id="days" class="time-unit"></span> días, 
+                <span id="hours" class="time-unit"></span> horas, 
+                <span id="minutes" class="time-unit"></span> minutos, 
+                <span id="seconds" class="time-unit"></span> segundos
             </div>
-        </header>
-        
-        <main>
-            <section class="left-section">
-                <h2>Tiempo Juntos</h2>
-                <div id="counter" class="counter-box">
-                    <span id="years" class="time-unit"></span> años, 
-                    <span id="days" class="time-unit"></span> días, 
-                    <span id="hours" class="time-unit"></span> horas, 
-                    <span id="minutes" class="time-unit"></span> minutos, 
-                    <span id="seconds" class="time-unit"></span> segundos
+            <h2>Nuestra Playlist</h2>
+            <div class="spotify-playlist">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EDlYgffvbkrmrN0WGQ6pf?si=bQol6ycDTS25mwVgj2HZdA" width="300" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </section>
+        <section class="right-section">
+            <h2>Nuestros Momentos</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="1000001634.jpg" style="width:100%">
                 </div>
-                <h2>Nuestra Playlist</h2>
-                <div class="spotify-playlist">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EDlYgffvbkrmrN0WGQ6pf?si=bQol6ycDTS25mwVgj2HZdA" width="300" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <div class="mySlides fade">
+                    <img src="1000001256.jpg" style="width:100%">
                 </div>
-            </section>
-            <section class="right-section">
-                <h2>Nuestros Momentos</h2>
-                <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <img src="1000001634.jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="1000001256.jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="1000001728_1_.jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="1000000363.jpeg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="1000000449.jpeg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="1000001886 (1).jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="IMG_0164.jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="IMG_4411.jpg" style="width:100%">
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="mySlides fade">
+                    <img src="1000001728_1_.jpg" style="width:100%">
                 </div>
-            </section>
-        </main>
-        <footer>
-            <p>Te amo infinito, <b>Marta&Rubén</b></p>
-        </footer>
-    </div>
-
+                <div class="mySlides fade">
+                    <img src="1000000363.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="1000000449.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="1000001886 (1).jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_0164.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_4411.jpg" style="width:100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Te amo infinito, <b>Marta&Rubén</b></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
