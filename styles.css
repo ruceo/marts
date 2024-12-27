@@ -5,45 +5,12 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     transition: background-color 0.3s, color 0.3s;
     background-image: url('path-to-your-wave-image.jpg'); /* Ruta a la imagen de fondo con olas */
     background-size: cover; /* Asegura que la imagen cubra toda la página */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen de fondo */
-}
-
-/* Sidebar Styles */
-#sidebar {
-    position: fixed;
-    left: -250px; /* Inicialmente oculto */
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: left 0.3s;
-}
-
-#sidebar:hover {
-    left: 0; /* Mostrar menú al pasar el cursor */
-}
-
-#sidebar button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#sidebar button:hover {
-    background-color: #555;
 }
 
 /* Make body scrollable */
@@ -185,6 +152,15 @@ header {
     z-index: 1000;
 }
 
+.hamburger-menu {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1001;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -300,6 +276,36 @@ footer {
 footer p {
     margin: 0;
     font-size: 1em;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    background-color: #555;
 }
 
 /* Cursor Trail */
