@@ -28,6 +28,15 @@ body.dark-theme {
     color: #fff8e1;
 }
 
+/* Estilos para los textos y títulos en el tema oscuro */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme p,
+body.dark-theme .time-unit,
+body.dark-theme .counter-box {
+    color: #fff8e1; /* Color claro para el tema oscuro */
+}
+
 /* Prepage Styles */
 .prepage {
     position: fixed;
@@ -174,7 +183,6 @@ main {
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #fff; /* Asegurar que los títulos sean visibles */
     text-align: center; /* Centrar los títulos */
 }
 
