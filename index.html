@@ -6,6 +6,7 @@
     <title>M&R</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="light-theme">
     <!-- Prepage Section -->
@@ -27,18 +28,18 @@
 
     <!-- Main Content -->
     <header>
-        <h1>Una historia sin fin</h1>
+        <h1>Nuestra Historia</h1>
         <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <div id="sidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-            <a href="javascript:void(0)" onclick="loadPage('tesoros')">Tesoros</a>
-            <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+            <a href="javascript:void(0)" class="menu-button" onclick="loadPage('tesoros')">Tesoros</a>
+            <button id="theme-toggle" class="menu-button" onclick="toggleTheme()">Cambiar Tema</button>
         </div>
     </header>
     <main>
         <section class="left-section">
             <div class="counter-box-container">
-                <h2>¿Cuánto llevamos juntos?</h2>
+                <h2>Tiempo Juntos</h2>
                 <div id="counter" class="counter-box">
                     <span id="years" class="time-unit"></span> años, 
                     <span id="days" class="time-unit"></span> días, 
@@ -53,7 +54,7 @@
             </div>
         </section>
         <section class="right-section">
-            <h2>Momentos memorables</h2>
+            <h2>Nuestros Momentos</h2>
             <div class="slideshow-container">
                 <div class="mySlides fade">
                     <img src="1000001634.jpg" style="width:100%">
@@ -105,7 +106,7 @@
         </section>
     </main>
     <footer>
-        <p>Marta&Rubén</p>
+        <p>Te amo infinito, <b>Marta&Rubén</b></p>
     </footer>
     <script src="script.js"></script>
 </body>
