@@ -72,7 +72,7 @@ function enterSite() {
 }
 
 // Cursor Trail Effect
-document.addEventListener('mousemove', function(e) {
+document.getElementById('prepage').addEventListener('mousemove', function(e) {
     const spark = document.createElement('div');
     spark.className = 'cursor-trail';
     spark.style.left = `${e.pageX}px`;
