@@ -42,7 +42,7 @@ body.dark-theme {
 }
 
 .infinity-video {
-    width: 400px;
+    width: 600px; /* Aumentar el tamaño del video */
     height: auto;
 }
 
