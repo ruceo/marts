@@ -37,11 +37,6 @@ body.dark-theme .counter-box {
     color: #fff8e1; /* Color claro para el tema oscuro */
 }
 
-/* Hide the main content initially */
-.hidden {
-    display: none;
-}
-
 /* Prepage Styles */
 .prepage {
     position: fixed;
@@ -110,53 +105,37 @@ body.dark-theme .counter-box {
     visibility: hidden;
 }
 
-/* Sidebar Menu */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1001;
+/* Starry Background */
+body.light-theme .prepage {
+    background: radial-gradient(circle, #1e3b70, #151a3c); /* Degradado azul */
+}
+
+body.dark-theme .prepage {
+    background: radial-gradient(circle, #1e3b70, #151a3c);
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.starry-bg {
+    position: absolute;
     top: 0;
     left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
 }
 
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #f1f1f1;
-}
-
-.sidebar .closebtn {
+.star {
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: yellow;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 1002;
-}
-
-.sidebar.active {
-    width: 250px;
+    width: 2px;
+    height: 2px;
+    background: yellow;
+    border-radius: 50%;
+    animation: starTwinkle 3s infinite;
 }
 
 /* Header */
