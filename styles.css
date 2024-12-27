@@ -223,7 +223,7 @@ img {
 /* Ajuste específico para pantallas grandes */
 @media screen and (min-width: 1024px) {
     .mySlides img {
-        max-height: 400px; /* Ajustar la altura máxima */
+        max-height: 300px; /* Ajustar la altura máxima */
         object-fit: cover; /* Asegura que la imagen mantenga su proporción */
     }
 }
