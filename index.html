@@ -25,14 +25,12 @@
         </div>
     </div>
 
-    <!-- Sidebar Menu -->
-    <div id="sidebar">
-        <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
-    </div>
-
     <!-- Main Content -->
     <header>
         <h1>Nuestra Historia</h1>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
     </header>
     <main>
         <section class="left-section">
@@ -84,6 +82,12 @@
     <footer>
         <p>Te amo infinito, <b>Marta&Rubén</b></p>
     </footer>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
