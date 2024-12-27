@@ -41,8 +41,8 @@ body.dark-theme {
     align-items: center;
 }
 
-.infinity-video {
-    width: 600px; /* Aumentar el tamaño del video */
+.infinity-svg {
+    width: 80%; /* Ajustar el tamaño del SVG */
     height: auto;
 }
 
@@ -177,6 +177,10 @@ footer {
     text-align: center;
 }
 
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
 footer p {
     margin: 0;
     font-size: 1em;
