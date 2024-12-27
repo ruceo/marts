@@ -138,7 +138,7 @@ function clearPassword() {
 function checkPassword() {
     const passwordInput = document.getElementById("password").value;
     if (passwordInput === correctPassword) {
-        alert("Contraseña correcta. Ganaste. Pero no te emociones… estaba planeado para que la adivinaras.");
+        alert("Contraseña correcta. Ganaste. Pero no te emociones… estaba planeado para que lo adivinaras.");
     } else {
         alert("Contraseña incorrecta. Inténtalo de nuevo.");
     }
