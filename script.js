@@ -1,18 +1,26 @@
 // Set the date we started dating
-const startDate = moment.tz("2022-08-29T00:00:00", "Europe/Madrid");
+const startDate = new Date("2022-08-29T00:00:00");
 
-// Update the count down every 1 second
-setInterval(function () {
-    const now = moment().tz("Europe/Madrid");
-    const distance = now.diff(startDate);
+// Function to update the countdown
+function updateCountdown() {
+    const now = new Date();
+    const distance = now - startDate;
+    
+    // Adjust for Spain time zone (UTC+1) in winter and (UTC+2) in summer
+    let offset = now.getTimezoneOffset() / 60;
+    let spainTimeDifference = 1; // Default to UTC+1 for winter
+    if (now.getMonth() >= 3 && now.getMonth() <= 9) { // April to September (inclusive) for summer time
+        spainTimeDifference = 2; // UTC+2 for summer
+    }
+
+    const adjustedDistance = distance - (offset + spainTimeDifference) * 60 * 60 * 1000;
 
     // Time calculations for years, days, hours, minutes, and seconds
-    const duration = moment.duration(distance);
-    const years = Math.floor(duration.asYears());
-    const days = Math.floor(duration.asDays()) % 365;
-    const hours = duration.hours();
-    const minutes = duration.minutes();
-    const seconds = duration.seconds();
+    const years = Math.floor(adjustedDistance / (1000 * 60 * 60 * 24 * 365));
+    const days = Math.floor((adjustedDistance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((adjustedDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((adjustedDistance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((adjustedDistance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="counter"
     document.getElementById("years").innerText = years;
@@ -20,7 +28,13 @@ setInterval(function () {
     document.getElementById("hours").innerText = hours;
     document.getElementById("minutes").innerText = minutes;
     document.getElementById("seconds").innerText = seconds;
-}, 1000);
+}
+
+// Update the count down every 1 second
+setInterval(updateCountdown, 1000);
+
+// Initial call to display the countdown immediately
+updateCountdown();
 
 // Slideshow
 let slideIndex = 0;
