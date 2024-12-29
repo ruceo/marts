@@ -4,24 +4,22 @@ const startDate = new Date("2022-08-29T00:00:00");
 // Function to update the countdown
 function updateCountdown() {
     const now = new Date();
-    const distance = now - startDate;
-
-    // Calculate the current offset in hours, considering Daylight Saving Time
-    const offset = -now.getTimezoneOffset() / 60;
-
-    // Spain is UTC+1 in winter and UTC+2 in summer
-    // Adjust for Spain time zone
-    const spainOffset = (now.getMonth() >= 2 && now.getMonth() <= 9) ? 2 : 1; // From April to October (inclusive) for summer time
-
-    // Calculate the adjusted time distance
-    const adjustedDistance = distance - ((offset - spainOffset) * 60 * 60 * 1000);
+    
+    // Convert current time to UTC
+    const nowUTC = new Date(now.getTime() + now.getTimezoneOffset() * 60 * 1000);
+    
+    // Adjust UTC time to Spain time (UTC+1 in winter, UTC+2 in summer)
+    const spainTimeOffset = (now.getMonth() >= 2 && now.getMonth() <= 9) ? 2 : 1; // From March to October (inclusive) for summer time
+    const nowSpainTime = new Date(nowUTC.getTime() + spainTimeOffset * 60 * 60 * 1000);
+    
+    const distance = nowSpainTime - startDate;
 
     // Time calculations for years, days, hours, minutes, and seconds
-    const years = Math.floor(adjustedDistance / (1000 * 60 * 60 * 24 * 365));
-    const days = Math.floor((adjustedDistance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((adjustedDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((adjustedDistance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((adjustedDistance % (1000 * 60)) / 1000);
+    const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+    const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="counter"
     document.getElementById("years").innerText = years;
