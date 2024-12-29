@@ -1,18 +1,10 @@
-// Set the date we started dating
-const startDate = new Date("2022-08-29T00:00:00");
+// Set the date we started dating, adjusted by one hour
+const startDate = new Date("2022-08-29T01:00:00");
 
 // Function to update the countdown
 function updateCountdown() {
     const now = new Date();
-    
-    // Convert current time to UTC
-    const nowUTC = new Date(now.getTime() + now.getTimezoneOffset() * 60 * 1000);
-    
-    // Adjust UTC time to Spain time (UTC+1 in winter, UTC+2 in summer)
-    const spainTimeOffset = (now.getMonth() >= 2 && now.getMonth() <= 9) ? 2 : 1; // From March to October (inclusive) for summer time
-    const nowSpainTime = new Date(nowUTC.getTime() + spainTimeOffset * 60 * 60 * 1000);
-    
-    const distance = nowSpainTime - startDate;
+    const distance = now - startDate;
 
     // Time calculations for years, days, hours, minutes, and seconds
     const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
