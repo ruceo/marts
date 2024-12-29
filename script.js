@@ -5,15 +5,16 @@ const startDate = new Date("2022-08-29T00:00:00");
 function updateCountdown() {
     const now = new Date();
     const distance = now - startDate;
-    
-    // Adjust for Spain time zone (UTC+1) in winter and (UTC+2) in summer
-    let offset = now.getTimezoneOffset() / 60;
-    let spainTimeDifference = 1; // Default to UTC+1 for winter
-    if (now.getMonth() >= 3 && now.getMonth() <= 9) { // April to September (inclusive) for summer time
-        spainTimeDifference = 2; // UTC+2 for summer
-    }
 
-    const adjustedDistance = distance - (offset + spainTimeDifference) * 60 * 60 * 1000;
+    // Calculate the current offset in hours, considering Daylight Saving Time
+    const offset = -now.getTimezoneOffset() / 60;
+
+    // Spain is UTC+1 in winter and UTC+2 in summer
+    // Adjust for Spain time zone
+    const spainOffset = (now.getMonth() >= 2 && now.getMonth() <= 9) ? 2 : 1; // From April to October (inclusive) for summer time
+
+    // Calculate the adjusted time distance
+    const adjustedDistance = distance - ((offset - spainOffset) * 60 * 60 * 1000);
 
     // Time calculations for years, days, hours, minutes, and seconds
     const years = Math.floor(adjustedDistance / (1000 * 60 * 60 * 24 * 365));
