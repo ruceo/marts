@@ -6,6 +6,10 @@ setInterval(function () {
     const now = new Date().getTime();
     const distance = now - startDate.getTime();
 
+    // Adjust for Spain time zone (UTC+1 or UTC+2)
+    const spainOffset = new Date().getTimezoneOffset() + 60; // +60 for UTC+1
+    const adjustedDistance = distance + spainOffset * 60 * 1000; // Adjusting the distance
+
     // Time calculations for years, days, hours, minutes, and seconds
     const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
     const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
