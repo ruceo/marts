@@ -1,21 +1,17 @@
 // Set the date we started dating
-const startDate = new Date("2022-08-29T00:00:00");
+const startDate = moment.tz("2022-08-29T00:00:00", "Europe/Madrid");
 
 // Update the count down every 1 second
 setInterval(function () {
-    const now = new Date().getTime();
-    const distance = now - startDate.getTime();
-
-    // Adjust for Spain time zone (UTC+1 or UTC+2)
-    const spainOffset = new Date().getTimezoneOffset() + 60; // +60 for UTC+1
-    const adjustedDistance = distance + spainOffset * 60 * 1000; // Adjusting the distance
+    const now = moment().tz("Europe/Madrid");
+    const distance = now.diff(startDate);
 
     // Time calculations for years, days, hours, minutes, and seconds
-    const years = Math.floor(adjustedDistance / (1000 * 60 * 60 * 24 * 365));
-    const days = Math.floor((adjustedDistance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((adjustedDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((adjustedDistance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((adjustedDistance % (1000 * 60)) / 1000);
+    const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+    const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="counter"
     document.getElementById("years").innerText = years;
